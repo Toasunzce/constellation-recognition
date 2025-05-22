@@ -152,5 +152,8 @@ draw_lines(output_list, name)
 
 
 
-# TODO: Обрабатывать случаи с несколькими созвездиями на одном фото.
-# Идея: сопоставлять треугольники между всеми звездами, а не только внутри одного созвездия.
+# TODO: process multi-constellation data
+# idea flow: build inter-constellation triangles
+
+# TODO: match constellation type
+# idea flow: use template matching???
