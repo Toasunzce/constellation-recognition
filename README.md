@@ -39,3 +39,7 @@ The result will be saved into `examples/results` folder with the name of the rec
 # Results
 
 
+The method works well on clean images (like Stellarium screenshots or images with clearly visible bright stars). However, it struggles on noisy or low-quality images with lots of false-positive detections.  
+
+The current implementation uses a VERY simplified planar triangle matching approach, which is fast and suitable for noise-free inputs, but it lacks robustness against image noise and distortions. A more reliable approach would be to integrate **RANSAC** or a similar robust fitting method, which is planned for a future updates.
+
