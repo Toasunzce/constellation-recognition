@@ -4,6 +4,7 @@ from collections import Counter
 import pandas as pd
 import numpy as np
 import cv2
+import sys
 from constellation_lines import lines
 
 
@@ -139,16 +140,18 @@ def match_stars_to_catalogue(df: pd.DataFrame, metrics: pd.DataFrame, tree: KDTr
     return matches
 
 
+if __name__ == "__main__":
+
+    path = sys.argv[1]
+    dots = find_stars(path)
+    df = pd.DataFrame(dots, columns=["x", "y"])
+    matches = match_stars_to_catalogue(df, metrics, tree)
+
+    name, output_list = find_lines(matches, lines)
+    draw_lines(output_list, name)
+    print(f"Saved to examples/results/{name.lower()}.jpg")
 
 
-path = 'examples/inputs/image1.png'
-
-dots = find_stars(path)
-df = pd.DataFrame(dots, columns=["x", "y"])
-matches = match_stars_to_catalogue(df, metrics, tree)
-
-name, output_list = find_lines(matches, lines)
-draw_lines(output_list, name)
 
 
 

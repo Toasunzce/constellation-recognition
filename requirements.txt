@@ -1,0 +1,5 @@
+numpy
+pandas
+astropy
+scikit-learn
+opencv-python
