@@ -16,7 +16,7 @@ In the example below, the program succesfully recognized and annotated a raw ima
 
 | Before | After |
 |--------|-------|
-| ![Raw image](examples/image1.png) | ![Annotated image](examples/cnc.jpg) |
+| ![Raw image](examples/inputs/image1.png) | ![Annotated image](examples/results/cnc.jpg) |
 
 # How to use
 
